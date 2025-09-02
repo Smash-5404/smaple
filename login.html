@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Login Form -->
+    <div class="form-box" id="loginForm">
+      <img src="assets/logo3.png" alt="Logo" class="logo">
+      <h2>Welcome back</h2>
+      <p>Please enter your details to login.</p>
+
+      <form>
+        <div class="input-group">
+          <input type="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-group">
+          <input type="password" placeholder="Password" required>
+          <a href="#" class="forgot">Forgot password?</a>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div class="divider">OR</div>
+
+        <!-- Google login only -->
+        <div class="social-login">
+  <button type="button" class="btn-light">
+    <img src="assets/icons8-google.svg" alt="Google" class="google-icon">
+    Login with Google
+  </button>
+</div>
+        <p class="switch">
+          Don’t have an account? <a href="#" onclick="toggleForm()">Register</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Register Form -->
+    <div class="form-box hidden" id="registerForm">
+      <img src="assets/logo3.png" alt="Logo" class="logo">
+      <h2>Welcome back</h2>
+      <p>Please enter your details to login.</p>
+
+      <form>
+        <div class="input-group">
+          <input type="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-group">
+          <input type="password" placeholder="Password" required>
+          <a href="#" class="forgot">Forgot password?</a>
+        </div>
+
+        <div class="input-group">
+          <input type="password" placeholder="Confirm Password" required>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" required> I accept <a href="#">Terms and Condition</a></label>
+        </div>
+
+        <button type="submit" class="btn">Create an account</button>
+
+        <p class="switch">
+          Don’t have an account? <a href="#" onclick="toggleForm()">Register</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+:root {
+  --primary: #2e2e2e;
+  --background: #fff;
+  --border: #e5e5e5;
+  --text: #333;
+  --link: #0073e6;
+  --radius: 10px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --font: 'Arial', sans-serif;
+  --form-width: 400px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+/*  Animated Background */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #00c853, #43a047, #66bb6a, #2e7d32);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/*  Container & Forms */
+.container {
+  display: flex;
+  gap: 30px;
+}
+
+.form-box {
+  background: var(--background);
+  padding: 40px 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: var(--form-width);
+  text-align: center;
+  position: relative;
+  z-index: 1; 
+}
+
+.hidden {
+  display: none;
+}
+
+/*  Logo */
+.logo {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+/*  Headings */
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/*  Inputs */
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-group .forgot {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: var(--link);
+  text-decoration: none;
+}
+
+/*  Options */
+.options {
+  text-align: left;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+}
+
+.options a {
+  color: var(--link);
+}
+
+/*  Buttons */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-light {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.btn-light:hover {
+  background: #f7f7f7;
+}
+
+/*  Google Icon */
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/*  Divider */
+.divider {
+  margin: 25px 0;
+  font-size: 0.95rem;
+  color: #888;
+  position: relative;
+}
+
+.divider::before, .divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: var(--border);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* Social login */
+.social-login {
+  margin-bottom: 20px;
+}
+
+/*  Switch link */
+.switch {
+  font-size: 0.95rem;
+  margin-top: 18px;
+}
+
+.switch a {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 500;
+}
